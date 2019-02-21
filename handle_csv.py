@@ -83,15 +83,9 @@ def request_to_list(r_flatten_list, group_step):
 
 if __name__ == '__main__':
 
-    # local
-    # TEMPLATE = "template.html"
-    # INDEX_HTML = "index.html"
-    # CSV_PATH = "stock.csv"
-
-    # server
-    TEMPLATE = "/var/www/py_stock/template.html"
-    INDEX_HTML = "/var/www/py_stock/index.html"
-    CSV_PATH = "/var/www/py_stock/stock.csv"
+    TEMPLATE = "template.html"
+    INDEX_HTML = "index.html"
+    CSV_PATH = "stock.csv"
 
     with open(CSV_PATH, 'r') as f:
         reader = csv.reader(f)
