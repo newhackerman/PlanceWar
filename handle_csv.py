@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import csv
-import os
-
 import numpy as np
 import time
 from bottle import template
@@ -10,7 +8,7 @@ import requests
 
 """
 
-github: https://github.com/geeeeeeeek/
+github: https://github.com/geeeeeeeek/py_stock
 
 """
 
