@@ -58,6 +58,7 @@ def request_to_list(r_flatten_list, group_step):
     r_stock_list = []
     # 分组处理, 步长group_step
     for i in range(0, len(r_flatten_list), group_step):
+        print("request index=%d" % i)
         sub_list = r_flatten_list[i:i + group_step]
         sub_flatten_str = ",".join(sub_list)
         r = requests.get("http://hq.sinajs.cn/list=" + sub_flatten_str)
@@ -111,9 +112,9 @@ if __name__ == '__main__':
 
         html = template(TEMPLATE, items=context)
 
-        with open(INDEX_HTML, 'wt') as f:
+        with open(INDEX_HTML, 'wb') as f:
             f.write(html.encode('utf-8'))
-            print time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-            print "=======success========"
+            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+            print("=======success========")
             f.close()
 
